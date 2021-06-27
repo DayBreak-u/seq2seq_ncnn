@@ -1,6 +1,6 @@
-# SeqSeq ncnn
+# Seq2Seq ncnn
 
-## the C++ version of SeqSeq with ncnn
+## the C++ version of Seq2Seq with ncnn
 
 ## 环境
 本项目环境基于macos，其他环境到[ncnn](https://github.com/Tencent/ncnn)官网下载相关库
