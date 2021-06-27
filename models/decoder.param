@@ -1,0 +1,24 @@
+7767517
+22 28
+Input            inputs                   0 1 inputs
+Input            encoder_hidden           0 1 encoder_hidden
+Input            encoder_outputs          0 1 encoder_outputs
+Split            splitncnn_input2         1 2 encoder_outputs encoder_outputs_splitncnn_0 encoder_outputs_splitncnn_1
+GRU              GRU_6                    2 2 inputs encoder_hidden 40 out2 0=256 1=196608 2=0
+Split            splitncnn_0              1 2 40 40_splitncnn_0 40_splitncnn_1
+Permute          Transpose_17             1 1 encoder_outputs_splitncnn_1 50
+Gemm             MatMul_18                2 1 40_splitncnn_1 50 51 2=0 3=1
+Reshape          Reshape_21               1 1 51 56 0=1
+Permute          Transpose_22             1 1 56 57
+Softmax          Softmax_23               1 1 57 out3 0=0 1=1
+Permute          Transpose_30             1 1 encoder_outputs_splitncnn_0 67 0=0
+Gemm             MatMul_31                2 1 out3 67 68
+Concat           Concat_32                2 1 68 40_splitncnn_0 69 0=1
+Reshape          Reshape_37               1 1 69 76 0=512
+InnerProduct     Gemm_38                  1 1 76 77 0=256 1=1 2=131072
+UnaryOp          Tanh_39                  1 1 77 78 0=16
+Reshape          Reshape_43               1 1 78 84 0=256 1=1
+Reshape          Reshape_45               1 1 84 86 0=256
+InnerProduct     Gemm_46                  1 1 86 87 0=17656 1=1 2=4519936
+Softmax          Softmax_47               1 1 87 88 0=0 1=1
+Reshape          Reshape_51               1 1 88 out1 0=-1 1=1

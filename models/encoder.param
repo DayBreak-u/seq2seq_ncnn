@@ -1,0 +1,4 @@
+7767517
+2 3
+Input            input                    0 1 input
+GRU              GRU_6                    1 2 input out1 64 0=128 1=98304 2=2
