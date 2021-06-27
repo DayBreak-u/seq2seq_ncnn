@@ -7,15 +7,6 @@
 #include "cppjieba/Jieba.hpp"
 
 
-
-struct EmbedingEncodeBlock {
-  float arr[128];
-};
-
-struct EmbedingDecodeBlock {
-  float arr[256];
-};
-
 class Sqeseq {
 public:
 

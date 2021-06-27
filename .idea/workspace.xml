@@ -12,8 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d31b3d7-f4c8-42df-8bb3-2859ed6643bb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/seq2seq.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/seq2seq.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624775655473</updated>
-      <workItem from="1624775659404" duration="3274000" />
+      <workItem from="1624775659404" duration="3493000" />
     </task>
     <servers />
   </component>
